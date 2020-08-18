@@ -1,0 +1,126 @@
+#Block Mining Rewards
+#Developer: oFearr
+#Chances are set as double, 0.5 = 50%
+mining:
+  DIAMOND_ORE:
+    1:
+      chance: 0.1
+      commands:
+        - 'bc &a&l<player> &fhas uncovered &a&l$100&f while mining &3&lDiamond Ore&f!'
+        - 'eco give <player> 100'
+  GOLD_ORE:
+    1:
+      chance: 0.1
+      commands:
+        - 'bc &a&l<player> &fhas uncovered &a&l$75&f while mining &6&lGold Ore&f!'
+        - 'eco give <player> 75'
+  IRON_ORE:
+    1:
+      chance: 0.05
+      commands:
+        - 'bc &a&l<player> &fhas uncovered &a&l$50&f while mining &f&lIron Ore&f!'
+        - 'eco give <player> 50'
+
+  LAPIS_ORE:
+    1:
+      chance: 0.05
+      commands:
+        - 'bc &a&l<player> &fhas uncovered &a&l$50&f while mining &9&lLapis Ore&f!'
+        - 'eco give <player> 50'
+
+  EMERALD_ORE:
+    1:
+      chance: 0.1
+      commands:
+        - 'bc &a&l<player> &fhas uncovered &a&l$150&f while mining &2&lEmerald Ore&f!'
+        - 'eco give <player> 150'
+
+  REDSTONE_ORE:
+    1:
+      chance: 0.1
+      commands:
+        - 'bc &a&l<player> &fhas uncovered &a&l$75&f while mining &4&lRedstone Ore&f!'
+        - 'eco give <player> 75'
+
+  NETHER_QUARTZ_ORE:
+    1:
+      chance: 0.1
+      commands:
+        - 'bc &a&l<player> &fhas uncovered &a&l$100&f while mining &f&lQuartz Ore&f!'
+        - 'eco give <player> 100'
+  STONE:
+    1:
+      chance: 0.01
+      commands:
+        - 'bc &a&l<player> &fhas uncovered &a&l$25&f while mining &7&lStone&f!'
+        - 'eco give <player> 25'
+
+#Entity Slaying rewards
+slaying:
+  PIG:
+    1:
+      chance: 0.05
+      commands:
+        - 'bc &a&l<player> &fhas cracked open the &d&lPiggy Bank &f& recieved &a&l$50&f!'
+        - 'eco give <player> 50'
+  COW:
+    1:
+      chance: 0.05
+      commands:
+        - 'bc &a&l<player> &fhas found a &6&lGold Steak &f& recieved &a&l$50&f!'
+        - 'eco give <player> 50'
+  MOOSHROOM:
+    1:
+      chance: 0.05
+      commands:
+        - 'bc &a&l<player> &fhas found a &c&lMagic Mushroom &f& recieved &a&l$50&f!'
+        - 'eco give <player> 50'
+  CREEPER:
+    1:
+      chance: 0.05
+      commands:
+        - 'bc &a&l<player> &fhas found a &7&lSuicide Vest &f& recieved &a&l$50&f!'
+        - 'eco give <player> 50'
+
+  ENDERMAN:
+    1:
+      chance: 0.05
+      commands:
+        - 'bc &a&l<player> &fhas found a &5&lCorrupted Pearl &f& recieved &a&l$50&f!'
+        - 'eco give <player> 50'
+
+  BLAZE:
+    1:
+      chance: 0.05
+      commands:
+        - 'bc &a&l<player> &fhas found a &e&lFiery Rod &f& recieved &a&l$50&f!'
+        - 'eco give <player> 50'
+
+  SHEEP:
+    1:
+      chance: 0.05
+      commands:
+        - 'bc &a&l<player> &fhas found a &f&lSheep Ear &f& recieved &a&l$50&f!'
+        - 'eco give <player> 50'
+#Animal breading rewards
+breeding:
+  COW:
+    1:
+      chance: 0.01
+      commands:
+        - 'bc &8[&d&lBreeding&8] &a&l<player> &fhas discovered a new &b&lmutation&f of cow when breeding & sold it for &a&l$350!'
+        - 'eco give <player> 350'
+#Crop farming rewards
+farming:
+  WHEAT:
+    1:
+      chance: 0.01
+      commands:
+        - 'bc &8[&e&lFarming&8] &a&l<player> &fhas discovered a new &c&lcrop exploit&f when farming wheat & sold the secret for &a&l$250!'
+        - 'eco give <player> 250'
+  POTATOES:
+    1:
+      chance: 0.01
+      commands:
+        - 'bc &8[&e&lFarming&8] &a&l<player> &fhas discovered a new &c&lcrop exploit&f when farming potatoes & sold the secret for &a&l$250!'
+        - 'eco give <player> 250'
