@@ -31,17 +31,6 @@ public final class Activity_Rewards extends JavaPlugin implements Listener {
         saveDefaultConfig();
     }
 
-    public static String converter(String msg) {
-        String coloredMsg = "";
-        for (int i = 0; i < msg.length(); i++) {
-            if (msg.charAt(i) == '&')
-                coloredMsg += '§';
-            else
-                coloredMsg += msg.charAt(i);
-        }
-        return coloredMsg;
-    }
-
     @Override
     public void onDisable() {
         // Plugin shutdown logic

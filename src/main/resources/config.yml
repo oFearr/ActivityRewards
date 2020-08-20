@@ -102,14 +102,6 @@ slaying:
       commands:
         - 'bc &a&l<player> &fhas found a &f&lSheep Ear &f& recieved &a&l$50&f!'
         - 'eco give <player> 50'
-#Animal breading rewards
-breeding:
-  COW:
-    1:
-      chance: 0.01
-      commands:
-        - 'bc &8[&d&lBreeding&8] &a&l<player> &fhas discovered a new &b&lmutation&f of cow when breeding & sold it for &a&l$350!'
-        - 'eco give <player> 350'
 #Crop farming rewards
 farming:
   WHEAT:
