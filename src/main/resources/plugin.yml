@@ -1,4 +1,4 @@
-name: Activity_Rewards
+name: ActivityRewards
 version: ${project.version}
 main: me.ofearr.activity_rewards.Activity_Rewards
 api-version: 1.16
