@@ -51,6 +51,7 @@ public final class Activity_Rewards extends JavaPlugin implements Listener {
     @EventHandler
     public void onPlayerMineBlock(BlockBreakEvent e){
         Player player = e.getPlayer();
+        player.sendMessage(e.getBlock().getType().toString());
         if(getConfig().getString("mining." + e.getBlock().getType().toString()) == null){
             return;
         }else{
@@ -96,7 +97,8 @@ public final class Activity_Rewards extends JavaPlugin implements Listener {
 
     }
 
-    //Slaying
+/*
+    //Breeding
     @EventHandler
     public void EntityBreed(EntityBreedEvent e){
         Player player = (Player) e.getBreeder();
@@ -121,7 +123,7 @@ public final class Activity_Rewards extends JavaPlugin implements Listener {
         }
 
 
-    }
+    } */
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
