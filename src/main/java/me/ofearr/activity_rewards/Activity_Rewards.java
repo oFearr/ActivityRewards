@@ -85,34 +85,6 @@ public final class Activity_Rewards extends JavaPlugin implements Listener {
 
     }
 
-/*
-    //Breeding
-    @EventHandler
-    public void EntityBreed(EntityBreedEvent e){
-        Player player = (Player) e.getBreeder();
-        if(!(player instanceof Player)) return;
-
-        if(getConfig().getString("breeding." + e.getEntity().getType().toString()) == null) {
-            return;
-        } else {
-                for (int i = 0; i < 100; i++) {
-                    Double chance = getConfig().getDouble("breeding." + e.getEntity().getType().toString() + "." + i + ".chance");
-                    if (ThreadLocalRandom.current().nextDouble() <= chance) {
-                        List<String> commands = getConfig().getStringList("breeding." + e.getEntity().getType().toString() + "." + i + ".commands");
-                        for (int c = 0; c < commands.size(); c++) {
-                            String UCMD = commands.get(c).replace("<player>", player.getName());
-                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), UCMD);
-                        }
-                        return;
-                    }
-                }
-
-
-        }
-
-
-    } */
-
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (command.getName().toLowerCase().equals("reloadrewards")) {
