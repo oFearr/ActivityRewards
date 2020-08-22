@@ -40,7 +40,6 @@ public final class Activity_Rewards extends JavaPlugin implements Listener {
     @EventHandler
     public void onPlayerMineBlock(BlockBreakEvent e){
         Player player = e.getPlayer();
-        player.sendMessage(e.getBlock().getType().toString());
         if(getConfig().getString("mining." + e.getBlock().getType().toString()) == null){
             return;
         }else{
