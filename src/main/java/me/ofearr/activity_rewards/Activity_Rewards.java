@@ -38,11 +38,6 @@ public final class Activity_Rewards extends JavaPlugin implements Listener {
         saveDefaultConfig();
     }
 
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
-    }
-
     //Mining
     @EventHandler
     public void onPlayerMineBlock(BlockBreakEvent e){
