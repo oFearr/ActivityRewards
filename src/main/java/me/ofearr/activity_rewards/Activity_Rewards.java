@@ -106,7 +106,7 @@ public final class Activity_Rewards extends JavaPlugin implements Listener {
         return false;
     }
 
-    
+
     @EventHandler
     public void Farm(BlockBreakEvent e){
         Player player = e.getPlayer();
