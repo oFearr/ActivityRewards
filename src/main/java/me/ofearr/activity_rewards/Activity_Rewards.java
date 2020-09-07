@@ -118,6 +118,7 @@ public final class Activity_Rewards extends JavaPlugin implements Listener {
                 for (int i = 0; i < 100; i++) {
                     Double chance = getConfig().getDouble("farming." + crop.getType().toString() + "." + i + ".chance");
                     if (ThreadLocalRandom.current().nextDouble() <= chance) {
+                        System.out.println("[ActivityRewards] > [Logger] Dispatching farming reward commands for " + player.getName() + "!");
                         List<String> commands = getConfig().getStringList("farming." + crop.getType().toString() + "." + i + ".commands");
                         for (int c = 0; c < commands.size(); c++) {
                             String UCMD = commands.get(c).replace("<player>", player.getName());
