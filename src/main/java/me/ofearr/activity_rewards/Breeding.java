@@ -25,16 +25,17 @@ public class Breeding implements Listener {
                 Double chance = config.getDouble("breeding." + e.getEntity().getType().toString() + "." + i + ".chance");
                 if (ThreadLocalRandom.current().nextDouble() <= chance) {
                     System.out.println("[ActivityRewards] > [Logger] Dispatching breeding reward commands for " + player.getName() + "!");
-                    List<String> messages = config.getStringList("breeding." + e.getEntity().getType().toString() + "." + i + ".messages");
-                    for(int m = 0; m < messages.size(); m++){
-                        String UMSG = messages.get(m);
-                        player.sendMessage(Activity_Rewards.converter(UMSG));
-                    }
-
+                    
                     List<String> commands = config.getStringList("breeding." + e.getEntity().getType().toString() + "." + i + ".commands");
                     for (int c = 0; c < commands.size(); c++) {
                         String UCMD = commands.get(c).replace("<player>", player.getName());
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), UCMD);
+                    }
+
+                    List<String> messages = config.getStringList("breeding." + e.getEntity().getType().toString() + "." + i + ".messages");
+                    for(int m = 0; m < messages.size(); m++){
+                        String UMSG = messages.get(m);
+                        player.sendMessage(Activity_Rewards.converter(UMSG));
                     }
                     return;
                 }

@@ -58,11 +58,7 @@ public final class Activity_Rewards extends JavaPlugin implements Listener {
                     Double chance = getConfig().getDouble("mining." + e.getBlock().getType().toString() + "." + i + ".chance");
                     if (ThreadLocalRandom.current().nextDouble() <= chance) {
                         System.out.println("[ActivityRewards] > [Logger] Dispatching mining reward commands for " + player.getName() + "!");
-                        List<String> messages = getConfig().getStringList("mining." + e.getBlock().getType().toString() + "." + i + ".messages");
-                        for(int m = 0; m < messages.size(); m++){
-                            String UMSG = messages.get(m);
-                            player.sendMessage(converter(UMSG));
-                        }
+
 
                         if(getConfig().getString("mining." + e.getBlock().getType().toString() + "." + i + ".spawn-particles") == "true"){
                             List<String> particles = getConfig().getStringList("mining." + e.getBlock().getType().toString() + "." + i + ".particles");
@@ -96,6 +92,12 @@ public final class Activity_Rewards extends JavaPlugin implements Listener {
                             String UCMD = commands.get(c).replace("<player>", player.getName());
                             Bukkit.dispatchCommand(Bukkit.getConsoleSender(), UCMD);
                         }
+
+                        List<String> messages = getConfig().getStringList("mining." + e.getBlock().getType().toString() + "." + i + ".messages");
+                        for(int m = 0; m < messages.size(); m++){
+                            String UMSG = messages.get(m);
+                            player.sendMessage(converter(UMSG));
+                        }
                         return;
                     }
                 }
@@ -117,11 +119,7 @@ public final class Activity_Rewards extends JavaPlugin implements Listener {
                 Double chance = getConfig().getDouble("slaying." + e.getEntity().getType().toString() + "." + i + ".chance");
                 if (ThreadLocalRandom.current().nextDouble() <= chance) {
                     System.out.println("[ActivityRewards] > [Logger] Dispatching slaying reward commands for " + player.getName() + "!");
-                    List<String> messages = getConfig().getStringList("slaying." + e.getEntity().getType().toString() + "." + i + ".messages");
-                    for(int m = 0; m < messages.size(); m++){
-                        String UMSG = messages.get(m);
-                        player.sendMessage(converter(UMSG));
-                    }
+
 
                     if(getConfig().getString("slaying." + e.getEntity().getType().toString() + "." + i + ".spawn-particles") == "true"){
                         List<String> particles = getConfig().getStringList("slaying." + e.getEntity().getType().toString() + "." + i + ".particles");
@@ -156,6 +154,12 @@ public final class Activity_Rewards extends JavaPlugin implements Listener {
                     for (int c = 0; c < commands.size(); c++) {
                         String UCMD = commands.get(c).replace("<player>", player.getName());
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), UCMD);
+                    }
+
+                    List<String> messages = getConfig().getStringList("slaying." + e.getEntity().getType().toString() + "." + i + ".messages");
+                    for(int m = 0; m < messages.size(); m++){
+                        String UMSG = messages.get(m);
+                        player.sendMessage(converter(UMSG));
                     }
                     return;
                 }
@@ -195,11 +199,7 @@ public final class Activity_Rewards extends JavaPlugin implements Listener {
                     Double chance = getConfig().getDouble("farming." + crop.getType().toString() + "." + i + ".chance");
                     if (ThreadLocalRandom.current().nextDouble() <= chance) {
                         System.out.println("[ActivityRewards] > [Logger] Dispatching farming reward commands for " + player.getName() + "!");
-                        List<String> messages = getConfig().getStringList("farming." + crop.getType().toString() + "." + i + ".messages");
-                        for(int m = 0; m < messages.size(); m++){
-                            String UMSG = messages.get(m);
-                            player.sendMessage(converter(UMSG));
-                        }
+
 
                         if(getConfig().getString("farming." + crop.getType().toString() + "." + i + ".spawn-particles") == "true"){
                             List<String> particles = getConfig().getStringList("farming." + crop.getType().toString() + "." + i + ".particles");
@@ -233,6 +233,11 @@ public final class Activity_Rewards extends JavaPlugin implements Listener {
                         for (int c = 0; c < commands.size(); c++) {
                             String UCMD = commands.get(c).replace("<player>", player.getName());
                             Bukkit.dispatchCommand(Bukkit.getConsoleSender(), UCMD);
+                        }
+                        List<String> messages = getConfig().getStringList("farming." + crop.getType().toString() + "." + i + ".messages");
+                        for(int m = 0; m < messages.size(); m++){
+                            String UMSG = messages.get(m);
+                            player.sendMessage(converter(UMSG));
                         }
                         return;
                     }
