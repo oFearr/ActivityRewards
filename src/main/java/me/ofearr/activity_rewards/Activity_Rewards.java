@@ -237,7 +237,6 @@ public final class Activity_Rewards extends JavaPlugin implements Listener {
                         return;
                     }
                 }
-
         }
 
     }
