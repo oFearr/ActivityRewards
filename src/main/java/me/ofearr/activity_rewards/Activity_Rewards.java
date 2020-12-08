@@ -51,9 +51,14 @@ public final class Activity_Rewards extends JavaPlugin implements Listener {
     @EventHandler
     public void onPlayerMineBlock(BlockBreakEvent e){
         Player player = e.getPlayer();
+        boolean SilkTouch = e.getPlayer().getInventory().getItemInMainHand().containsEnchantment(SILK_TOUCH);
         if(getConfig().getString("mining." + e.getBlock().getType().toString()) == null){
             return;
-        }else{
+        }
+        if (SilkTouch) {
+            return;
+        }
+        else{
                 for(int i = 0; i < 100; i++){
                     Double chance = getConfig().getDouble("mining." + e.getBlock().getType().toString() + "." + i + ".chance");
                     if (ThreadLocalRandom.current().nextDouble() <= chance) {
